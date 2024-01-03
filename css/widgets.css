@@ -17,7 +17,7 @@
     display: flex;
 }
 
-.si-widget .si-header .infoLink, .si-widget .si-header .infoTag {
+.si-widget .si-header .infoLink, .si-widget .si-header .infoPopupTag {
     display: none;
     font-size: 10px;
     margin-top: -8px;
@@ -95,7 +95,7 @@
     margin-top: -2px;
 }
 
-.si-widget .infoLink, .si-widget.info-link .infoTag {
+.si-widget .infoLink, .si-widget.info-link .infoPopupTag {
     display: none;
 }
 
@@ -106,7 +106,7 @@
     display: none;
 }
 
-.si-widget .infoTag, .si-widget .infoLink {
+.si-widget .infoPopupTag, .si-widget .infoLink {
     cursor: pointer;
 }
 
@@ -288,10 +288,10 @@
     flex-direction: row-reverse;
     gap: 4px;
 }
-.si-widget.minimal .si-leaf-icon, .si-widget.minimal.info-link .si-header .infoTag {
+.si-widget.minimal .si-leaf-icon, .si-widget.minimal.info-link .si-header .infoPopupTag {
     display: none;
 }
-.si-widget.minimal.info-link .si-header .infoLink, .si-widget.minimal .si-header .infoTag {
+.si-widget.minimal.info-link .si-header .infoLink, .si-widget.minimal .si-header .infoPopupTag {
     display: block;
 }
 .si-widget.minimal .switch {
@@ -349,6 +349,10 @@
 /* CARTS OPTIONS/THEME VARIANTS -- use will vary merchant to merchant */
 /* Really small mobile carts */
 /* @media screen and (max-width:390px) {
+    .si-widget .si-logo {
+        width: 30px;
+        margin-right: -2px;     
+    }
     .si-widget .si-header {
         font-size: 19px;
     }
@@ -369,3 +373,98 @@
     }
 }
 */
+
+/* MODAL */
+/* The Modal (background) */
+.si-modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 500; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.si-modal-content {
+    background-color: #fefefe;
+    margin: 5% auto; /* 15% from the top and centered */
+    padding: 0px;
+    border: none;
+    width: 690px;
+    height: 870px;
+    border-radius: 32px;
+    background: #FFF;
+    box-shadow: 0px 8px 42.3px 6px rgba(0, 0, 0, 0.10);
+    position: relative;
+}
+
+@keyframes gradientBackground {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+.si-modal-top {
+    background: linear-gradient(-45deg, #6675FF, #8a8ed6, #6675FF, #7a75d6);
+    background-size: 400% 400%;
+    animation: gradientBackground 15s ease infinite;
+    width: 100%;
+    height: 314px;
+    border-top-right-radius: 32px;
+    border-top-left-radius: 32px;
+    /* border-bottom: 14px solid #6675FF; */
+    position: relative;
+}
+
+.si-modal .si-logo {
+    position: absolute;
+    bottom: -21px;
+    /* bottom: -35px; */ /* use this if using a border */
+    left: 75px;
+    height: 148px;
+    width: 104px;
+}
+
+.si-modal .si-logo-rect {
+    fill: white;
+}
+
+.si-modal .si-logo-stroke {
+    stroke: white;
+    fill: none;
+}
+
+.si-modal .si-logo-fill {
+    fill: #6675FF;
+}
+.si-modal-bottom {
+
+}
+
+/* The Close Button */
+.si-modal-close {
+    color: #fff;
+    float: right;
+    font-size: 28px;
+    font-weight: lighter;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+
+.si-modal-close:hover,
+.si-modal-close:focus {
+    font-weight:bold;
+    text-decoration: none;
+    cursor: pointer;
+}
