@@ -3,6 +3,7 @@
 /* Import fonts so it's the same across all sites (most sites probably have these, but I'm doing this as a fail safe) */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
 
 /* General widget css */
 .si-widget .si-widget-container {
@@ -403,6 +404,12 @@
     position: relative;
 }
 
+.si-modal-content svg {
+    width: 100%;
+    height: 100%;
+    position:absolute;
+}
+
 @keyframes gradientBackground {
     0% {
       background-position: 0% 50%;
@@ -416,21 +423,20 @@
   }
 
 .si-modal-top {
-    background: linear-gradient(-45deg, #6675FF, #8a8ed6, #6675FF, #7a75d6);
+    background: linear-gradient(-45deg, #6675FF, #8a8ed6, #3E3D6A, #7a75d6);
     background-size: 400% 400%;
-    animation: gradientBackground 15s ease infinite;
+    animation: gradientBackground 20s ease infinite;
     width: 100%;
     height: 314px;
     border-top-right-radius: 32px;
     border-top-left-radius: 32px;
-    /* border-bottom: 14px solid #6675FF; */
+    border-bottom: 14px solid #6675FF;
     position: relative;
 }
 
 .si-modal .si-logo {
     position: absolute;
-    bottom: -21px;
-    /* bottom: -35px; */ /* use this if using a border */
+     bottom: -35px;
     left: 75px;
     height: 148px;
     width: 104px;
@@ -449,13 +455,93 @@
     fill: #6675FF;
 }
 .si-modal-bottom {
+    padding: 50px 70px;
+}
+.si-modal-header {
+    color: rgba(6, 0, 30, 0.75);
+    font-family: 'Montserrat', 'Open Sans', Arial, Helvetica, sans-serif;
+    font-size: 42.847px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.001px;
+}
+.si-modal-header span {
+    font-weight: 700;
+}
 
+.si-modal-info-container {
+    margin-left: 15px;
+    margin-top: 40px;
+    width: fit-content;
+}
+.si-modal-info-block {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    margin: 30px 0px;
+}
+.si-modal-content .si-modal-info-check {
+    width: 32px;
+    height: 32px;
+}
+.si-modal-content .si-modal-info-check svg {
+    width: 32px;
+    height: 32px;
+}
+.si-modal-info-block-left {
+    color: #06001E;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    font-size: 19.26px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 22.659px; /* 117.647% */
+    letter-spacing: 0.17px;
+    margin-left: 15px;
+}
+.si-modal-info-block-right {
+    color: #6675FF;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    font-size: 15.861px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22.659px; /* 142.857% */
+    letter-spacing: 0.283px;
+    margin-left: 3px;
+}
+.si-modal-links {
+    width: fit-content;
+    margin: auto;
+    font-family: 'Karla', sans-serif;
+    font-size: 15.286px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 134.8%; /* 20.606px */
+    display: flex;
+    justify-content: space-evenly;
+    width: 500px;
+    margin-top: 50px;
+}
+
+.si-modal-link {
+    display: flex;
+    cursor: pointer;
+    color: rgba(6, 0, 30, 0.50);
+    text-decoration: none;
+}
+.si-modal-link svg {
+    display: flex;
+    width: 90.188px;
+    height: 18.343px;
+    justify-content: center;
+    align-items: center;
 }
 
 /* The Close Button */
 .si-modal-close {
     color: #fff;
-    float: right;
+    position: absolute;
+    right: 0px;
     font-size: 28px;
     font-weight: lighter;
     margin-top: 10px;
