@@ -16,6 +16,7 @@
 
 .si-widget .si-widget-flex-column {
     display: flex;
+    align-items: center;
 }
 
 .si-widget .si-header .infoLink, .si-widget .si-header .infoPopupTag {
