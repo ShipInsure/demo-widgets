@@ -28,7 +28,7 @@
     display: none;
     color:rgba(6, 0, 30, 0.50);
     font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-    font-size: 12px;
+    font-size: 10px;
     font-style: normal;
     font-weight: 600;
     line-height: 20px;
@@ -46,8 +46,8 @@
 }
 
 .si-widget .si-logo {
-    width: 32.892px;
-    height: 46.808px;
+    width: 28.5px;
+    height: 46px;
     margin-top: -1px;
 }
 .si-logo-rect {
@@ -64,16 +64,17 @@
 }
 
 .si-widget .si-text-container {
-    padding-left: 8px;
+    padding-left: 6px;
 }
 
 .si-widget .si-header {
     color:#06001E;
     font-family: 'Montserrat', 'Open Sans', Arial, Helvetica, sans-serif;
-    font-size: 22px;
+    font-size: 18px;
     font-style: normal;
     font-weight: 700;
     line-height: 26.377px;
+    margin-bottom: 0px;
     display: flex;
     align-items: center;
     text-rendering: optimizeLegibility;
@@ -84,7 +85,7 @@
 .si-widget .si-sub-header {
     color:rgba(6, 0, 30, 0.50);
     font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-    font-size: 14px;
+    font-size: 12px;
     font-style: normal;
     font-weight: 600;
     line-height: 20px;
@@ -93,7 +94,7 @@
     -moz-osx-font-smoothing: grayscale;
     position: relative;
     width: fit-content;
-    margin-top: -2px;
+    margin-top: -3px;
 }
 
 .si-widget .infoLink, .si-widget.info-link .infoPopupTag {
@@ -114,8 +115,8 @@
 .si-widget .si-sub-header > span {
     font-size: 8px;
     position: absolute;
-    top: 1px;
-    padding-left: 1px;
+    top: 0px;
+    padding-left: 2px;
 }
 
 .si-widget .si-switch-and-price-container {
@@ -129,7 +130,7 @@
 .si-widget .si-switch-and-price-container .shipinsureAmount {
     color: #06001E;
     font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-    font-size: 14px;
+    font-size: 13px;
     font-style: normal;
     font-weight: 700;
     line-height: 16px;
@@ -145,15 +146,16 @@
     position: relative;
     display: inline-block;
     vertical-align: top;
-    width: 40px;
-    height: 20px;
+    width: 34px;
+    height: 18px;
     -moz-border-radius: 18px;
     -webkit-border-radius: 18px;
     border-radius: 100px;
     cursor: pointer;
     flex: 0 0 31px;
     padding: 0px;
-    margin: 0px 0px -10px 0px;
+    margin: 1.5px 0px -14px 0px;
+    background-color: transparent;
   }
   
   .si-widget .switch-input {
@@ -216,10 +218,10 @@
   }
   .si-widget .switch-handle {
     position: absolute;
-    top: 3.6px;
+    top: 4px;
     left: 4px;
-    width: 12.5px;
-    height: 12.5px;
+    width: 10px;
+    height: 10px;
     background: white;
     -moz-border-radius: 11px;
     -webkit-border-radius: 11px;
@@ -250,8 +252,8 @@
     background-image: linear-gradient(to bottom, #D3D3D3, D3D3D3);
   }
   .si-widget .switch-input:checked ~ .switch-handle {
-    top: 3.6px;
-    left: 23.5px;
+    top: 4px;
+    left: 20px;
 }
 
 /* WIDGET CUSTOMIZATION OPTIONS */
@@ -277,13 +279,14 @@
 .si-widget.minimal .si-text-container {
     display: flex;
     align-items: center;
+    padding-left: 5px;
 }
 .si-widget.minimal .si-logo {
-    width: 20.424px;
-    height: 29.065px;
+    width: 17px;
+    height: 29px;
 }
 .si-widget.minimal .si-header {
-    font-size: 20px;
+    font-size: 17px;
 }
 .si-widget.minimal .si-switch-and-price-container {
     flex-direction: row-reverse;
@@ -294,15 +297,16 @@
 }
 .si-widget.minimal.info-link .si-header .infoLink, .si-widget.minimal .si-header .infoPopupTag {
     display: block;
+    font-size: 9px;
 }
 .si-widget.minimal .switch {
     margin: 0px;
 }
 .si-widget.minimal .switch-label {
-    width: 35px;
+    /* width: 35px; */
 }
 .si-widget.minimal .switch-input:checked ~ .switch-handle {
-    left: 19px;
+    left: 17px;
 }
 
 /* Dark Mode */
@@ -344,43 +348,16 @@
 .product-shipinsure {
     display: none !important;
 }
-/*----- */
 
+/* RESPONSIVE */
 
-/* CARTS OPTIONS/THEME VARIANTS -- use will vary merchant to merchant */
-/* Really small mobile carts */
-/* @media screen and (max-width:390px) {
-    .si-widget .si-logo {
-        width: 30px;
-        margin-right: -2px;     
-    }
-    .si-widget .si-header {
-        font-size: 19px;
-    }
-    .si-widget .si-sub-header {
-        font-size: 13px;
-    }
-} */
-
-/* Themes where main cart large splits widget: Symmetry, Debut, Atlantic */
-/* 
-@media screen and (min-width:750px) {
-    --their-main-cart-selector .shipinsure {
-        max-width: 340px;
-        margin-left: auto;
-    }
-    --THEIR CART BUTTON {
-        min-width: 340px;
-    }
-}
-*/
 
 /* MODAL */
 /* The Modal (background) */
 .si-modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
-    z-index: 500; /* Sit on top */
+    z-index: 999999999999999999999; /* Sit on top */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
@@ -542,6 +519,7 @@
     color: #fff;
     position: absolute;
     right: 0px;
+    top: -4px;
     font-size: 28px;
     font-weight: lighter;
     margin-top: 10px;

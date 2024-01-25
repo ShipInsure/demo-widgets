@@ -63,7 +63,7 @@ body {
 .demo-card {
     border-radius: 10px;
     height: 225px;
-    width: 450px;
+    width: 400px;
     margin: 15px;
     display: flex;
     justify-content: center;
@@ -247,7 +247,7 @@ body {
     justify-content: center;
     align-items: center;
     margin: 5px auto 0px;
-    height: 50px;
+    height: 42px;
     width: 100%;
     cursor: pointer;
     opacity: 1;
@@ -290,7 +290,7 @@ body {
 #demoCard {
     resize: horizontal;
     max-width: 600px;
-    min-width: 375px;
+    min-width: 330px;
     position: fixed;
 }
 
@@ -446,7 +446,7 @@ body {
 
 @media screen and (max-width: 1055px), screen and (max-height: 745px) {
     .desktop-only-message {
-        display: flex;
+        /* display: flex; */
     }
 }
 

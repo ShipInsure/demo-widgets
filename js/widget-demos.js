@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     function stopResize() {
         window.removeEventListener('mousemove', resize);
-        card.style.width = '450px'; // Set the width back to 450px once you're done resizing
+        card.style.width = '400px'; // Set the width back to 450px once you're done resizing
         card.style.transition = 'width 0.5s ease'; // Apply a smooth transition so it *slowly* returns to 450px
     }
 
