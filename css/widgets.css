@@ -209,7 +209,7 @@
     opacity: 0;
   }
   .si-widget .switch-input:checked ~ .switch-label {
-    background: #6675FF;
+    background: #C16452;
   }
   .si-widget .switch-input:checked ~ .switch-label::before {
     opacity: 0;
