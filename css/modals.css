@@ -70,16 +70,16 @@
 }
 
 .si-modal .si-logo-rect {
-    fill: white;
+    fill: white !important;
 }
 
 .si-modal .si-logo-stroke {
     stroke: white;
-    fill: none;
+    fill: none !important;
 }
 
 .si-modal .si-logo-fill {
-    fill: #6675FF;
+    fill: #6675FF !important;
 }
 .si-modal-bottom {
     padding: 50px 70px;

@@ -51,16 +51,20 @@
     margin-top: -1px;
 }
 .si-logo-rect {
-    fill: #06001E;
+    fill: #06001E !important;
 }
 
 .si-logo-stroke {
     stroke: #06001E;
-    fill: none;
+    fill: none !important;
 }
 
 .si-logo-fill {
-    fill: white;
+    fill: white !important;
+}
+
+.si-header > .si-leaf-icon > path {
+    fill: green !important;
 }
 
 .si-widget .si-text-container {
@@ -323,16 +327,16 @@
 }
 
 .si-widget.darkmode .si-logo-rect {
-    fill: white;
+    fill: white !important;
 }
 
 .si-widget.darkmode .si-logo-stroke {
     stroke: white;
-    fill: none;
+    fill: none !important;
 }
 
 .si-widget.darkmode .si-logo-fill {
-    fill: #06001E;
+    fill: #06001E !important;
 }
 
 .si-widget.disclaimer.darkmode .si-disclaimer {
