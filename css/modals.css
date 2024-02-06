@@ -71,6 +71,7 @@
 
 .si-modal .si-logo-rect {
     fill: white !important;
+    color: transparent;
 }
 
 .si-modal .si-logo-stroke {
@@ -80,6 +81,7 @@
 
 .si-modal .si-logo-fill {
     fill: #6675FF !important;
+    color: transparent;
 }
 .si-modal-bottom {
     padding: 50px 70px;
@@ -162,6 +164,7 @@
     height: 18.343px;
     justify-content: center;
     align-items: center;
+    color: transparent;
 }
 
 /* The Close Button */
