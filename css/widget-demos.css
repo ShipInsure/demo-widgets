@@ -446,7 +446,7 @@ body {
 
 @media screen and (max-width: 1055px), screen and (max-height: 745px) {
     .desktop-only-message {
-        /* display: flex; */
+        display: flex;
     }
 }
 
