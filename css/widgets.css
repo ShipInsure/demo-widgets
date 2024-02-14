@@ -351,3 +351,10 @@
 }
 
 /* RESPONSIVE */
+
+.NL-SI-disclaimer {
+    font-size: 10px;
+    color:rgba(6, 0, 30, 0.50);
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
