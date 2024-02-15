@@ -174,4 +174,30 @@ document.addEventListener('DOMContentLoaded', function() {
             this.parentNode.classList.remove("focused");
         });
     });
+
+    // functionality to resize widget when demoCard/checkout button gets too wide
+    var shipInsure = document.querySelector('.shipinsure');
+
+    // Create a function to apply or remove styles based on width
+    function adjustStyles() {
+        if (card.offsetWidth > 550) {
+        shipInsure.style.maxWidth = '335px';
+        shipInsure.style.marginRight = '0px';
+        } else {
+        shipInsure.style.maxWidth = '';
+        shipInsure.style.marginRight = '';
+        }
+    }
+
+    // Create a ResizeObserver instance and observe the demoCard
+    var resizeObserver = new ResizeObserver(function(entries) {
+        // Call adjustStyles whenever a resize is observed
+        adjustStyles();
+    });
+
+    // Start observing the demoCard element
+    resizeObserver.observe(card);
+
+    // Also call adjustStyles initially in case the initial state needs adjustment
+    adjustStyles();
 });

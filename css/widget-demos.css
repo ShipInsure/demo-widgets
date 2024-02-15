@@ -289,7 +289,7 @@ body {
 
 #demoCard {
     resize: horizontal;
-    max-width: 600px;
+    max-width: 700px;
     min-width: 330px;
     position: fixed;
 }
@@ -495,4 +495,10 @@ body {
     font-weight: bold;
     font-family: 'Open Sans';
     color: #6675FF;
+}
+
+.shipinsure {
+    transition: max-width 0.5s ease, margin-right 0.5s ease;
+    max-width: 100%; /* Ensure an initial value is set */
+    margin-right: 0; /* Ensure an initial value is set */
 }
