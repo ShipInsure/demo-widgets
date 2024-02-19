@@ -60,7 +60,8 @@ document.addEventListener('DOMContentLoaded', function() {
         'modeSelect': { 'lightmode': 'lightmode', 'darkmode': 'darkmode' },
         'disclaimerSelect': { 'noDisclaimer': '', 'disclaimer': 'disclaimer' },
         'sizeSelect': { 'normal': '', 'minimal': 'minimal' },
-        'infoSelect': { 'infoModal': '', 'infoLink': 'info-link' }
+        'infoSelect': { 'infoModal': '', 'infoLink': 'info-link' },
+        'snapSelect': { 'snapRight': 'snap-right', 'snapLeft': 'snap-left'}
     };
 
     // Generic event handler for select change (so it applies to all the dropdowns)
@@ -176,28 +177,35 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // functionality to resize widget when demoCard/checkout button gets too wide
-    var shipInsure = document.querySelector('.shipinsure');
+    var siWidget = document.querySelector('.si-widget');
 
     // Create a function to apply or remove styles based on width
-    function adjustStyles() {
-        if (card.offsetWidth > 550) {
-        shipInsure.style.maxWidth = '335px';
-        shipInsure.style.marginRight = '0px';
+    function handleDynamicWidgetWidth() {
+        if (card.offsetWidth > 520) {
+            if (siWidget.classList.contains('snap-left')) {
+                siWidget.style.maxWidth = '335px';
+                siWidget.style.marginRight = 'auto';
+                siWidget.style.marginLeft = '0px'
+            } else {
+                siWidget.style.maxWidth = '335px';
+                siWidget.style.marginLeft = 'auto';
+                siWidget.style.marginRight = '0px';
+            }
         } else {
-        shipInsure.style.maxWidth = '';
-        shipInsure.style.marginRight = '';
+            siWidget.style.maxWidth = '';
+            siWidget.style.marginRight = '';
         }
     }
 
     // Create a ResizeObserver instance and observe the demoCard
     var resizeObserver = new ResizeObserver(function(entries) {
         // Call adjustStyles whenever a resize is observed
-        adjustStyles();
+        handleDynamicWidgetWidth();
     });
 
     // Start observing the demoCard element
     resizeObserver.observe(card);
 
     // Also call adjustStyles initially in case the initial state needs adjustment
-    adjustStyles();
+    handleDynamicWidgetWidth();
 });

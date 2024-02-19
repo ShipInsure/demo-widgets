@@ -6,6 +6,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
 
 /* General widget css */
+.shipinsure {
+    width: 100%;
+}
+
+.si-widget {
+    transition: max-width 0.5s ease, margin-right 0.5s ease;
+    max-width: 100%; /* Ensure an initial value is set */
+    margin-right: 0; /* Ensure an initial value is set */
+    margin-left: 0;
+}
+
 .si-widget .si-widget-container {
     font-family: 'Open Sans', Helvetica, Arial,  Roboto, Lato, sans-serif;
     display: flex;
