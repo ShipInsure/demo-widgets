@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let colorInput = document.getElementById('colorInput');
     var switchLabel = document.querySelector('.switch-label');
     widgetSwitch = document.querySelector('.switch-input');
+    let switchColorChanged = false
 
     // switch toggle to 'on' on pageload
     widgetSwitch.checked = !widgetSwitch.checked; 
@@ -17,13 +18,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
     var ecoCheckbox = document.querySelector('input[name="typeOption"][value="eco"]');
     ecoCheckbox.addEventListener('change', function() {
-        if(this.checked) {
-            colorInput.value = "#09B825"
-            switchLabel.style.backgroundColor = colorInput.value
+        if (switchColorChanged) {
+            return;
         } else {
-            colorInput.value = '#6675FF';
-            switchLabel.style.backgroundColor = colorInput.value
-
+            if (this.checked) {
+                colorInput.value = "#09B825"
+                switchLabel.style.backgroundColor = colorInput.value
+            } else {
+                colorInput.value = '#6675FF';
+                switchLabel.style.backgroundColor = colorInput.value
+            }
         }
     });
 
@@ -43,6 +47,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     document.getElementById('colorInput').addEventListener('input', function() {
+        switchColorChanged = true
+
         let formattedInput = this.value;
         formattedInput.value = "#"
         if (formattedInput.charAt(0) !== '#') {
@@ -56,13 +62,16 @@ document.addEventListener('DOMContentLoaded', function() {
         this.value = formattedInput; // Update the switch color field with the formatted 'input' value
 
         var switchLabel = document.querySelector('.switch-label');
+        var fullCoveragePill = document.querySelector('.si-full-coverage')
 
         // Check if the widgetSwitch is checked and input is a valid hex color
         if (widgetSwitch.checked && /^#[0-9A-F]{6}$/i.test(formattedInput)) {
             switchLabel.style.backgroundColor = formattedInput;
+            fullCoveragePill.style.backgroundColor = formattedInput;
         } else {
             // If widgetSwitch is not checked or color is invalid, clear the inline style; it will return to default purple color
             switchLabel.style.backgroundColor = '';
+            fullCoveragePill.style.backgroundColor = '';
         }
     });
     
