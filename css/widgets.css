@@ -8,6 +8,7 @@
 /* General widget css */
 .shipinsure {
     width: 100%;
+    margin-bottom: 0px;
 }
 
 .si-widget {
@@ -21,7 +22,6 @@
     font-family: 'Open Sans', Helvetica, Arial,  Roboto, Lato, sans-serif;
     display: flex;
     justify-content: space-between;
-    padding-bottom: 10px;
     width: 100%;
 }
 
@@ -43,8 +43,8 @@
     font-style: normal;
     font-weight: 600;
     line-height: 20px;
-    padding-bottom: 10px;
-    margin-top: -5px;
+    padding-bottom: 5px;
+    margin-top: 0px;
     width: 298px;
     text-align: start;
 }
@@ -353,6 +353,109 @@
 
 .si-widget.disclaimer.darkmode .si-disclaimer {
     color:rgba(255, 255, 255, 0.60)
+}
+
+/* Full Coverage */
+.si-widget .si-full-coverage {
+    display: none;
+}
+.si-widget.full-coverage .si-switch-and-price-container {
+    display: none;
+}
+.si-widget.full-coverage .si-full-coverage {
+    display: flex;
+    width: 53px;
+    height: 20px;
+    background-color: #6675FF;
+    border-radius: 100px;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+/* Eco */
+#ShipInsureWidget.eco {
+    padding: 10px 10px 8px;
+}
+.si-widget .si-logo.si-leaf-icon {
+    display: none;
+}
+.si-widget.eco .si-logo {
+    display: none;
+}
+.si-widget.eco .si-leaf-icon {
+    display: none;
+}
+.si-widget .si-sub-header.si-sub-header-eco {
+    display: none;
+}
+.si-widget.eco .si-sub-header {
+    display: none;
+}
+.si-widget.eco .si-sub-header.si-sub-header-eco {
+    display: block;
+    font-size: 11px;
+}
+.si-widget.disclaimer.eco .si-sub-header.si-sub-header-eco {
+    display: none;
+}
+.si-widget.minimal.eco .si-sub-header.si-sub-header-eco {
+    display: none;
+}
+.si-widget.eco .si-logo.si-leaf-icon {
+    display: block;
+    width: 36px;
+    height: 44px;
+    margin-left: -3px;
+    margin-right: -2px;
+}
+.si-widget.minimal.eco .si-logo.si-leaf-icon {
+    height: 30px;
+    width: 30px;
+}
+.si-widget.eco.full-coverage .si-full-coverage {
+    background-color: #09B825;
+}
+.si-widget.eco {
+    background-color: #C5EBCB;
+    border-radius: 8px;
+}
+.si-widget.eco .switch-input:checked ~ .switch-label {
+    background: #09B825;
+}
+.si-widget.eco .si-header {
+    color: #06001E;
+}
+
+.si-widget.eco .si-switch-and-price-container .shipinsureAmount {
+    color: #06001E;
+}
+
+.si-widget.eco .si-sub-header {
+    color:rgba(6, 0, 30, 0.50);
+}
+
+.si-widget.eco .si-logo-rect {
+    fill: #06001E !important;
+}
+
+.si-widget.eco .si-logo-stroke {
+    stroke: #06001E;
+    fill: none !important;
+}
+
+.si-widget.eco .si-logo-fill {
+    fill: white !important;
+    color: transparent;
+}
+
+.si-widget.disclaimer.eco .si-disclaimer {
+    color:rgba(6, 0, 30, 0.50);
 }
 
 /* Hide product (copy this block) */

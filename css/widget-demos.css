@@ -23,6 +23,7 @@ body {
     height: 100%;
     overflow: hidden;
     padding: 50px 60px;
+    color: white;
 }
 .demo-site-container .customization-bar h1 {
     color: #FFF;
@@ -104,6 +105,7 @@ body {
     margin-bottom: 10px;
     width: 287px;
     height: 56px;
+    min-height: fit-content;
   }
   
   /* Custom arrow */
@@ -290,7 +292,7 @@ body {
 #demoCard {
     resize: horizontal;
     max-width: 700px;
-    min-width: 330px;
+    min-width: 350px;
     position: fixed;
 }
 
@@ -501,4 +503,136 @@ body {
     transition: max-width 0.5s ease, margin-right 0.5s ease;
     max-width: 100%; /* Ensure an initial value is set */
     margin-right: 0; /* Ensure an initial value is set */
+}
+
+.widget-options .select-style::after {
+    content: '';
+    position: absolute;
+    right: 18px;
+    top: 40%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    border: none;
+    border-width: 0 2.5px 2.5px 0;
+    display: inline-block;
+    padding: 4px;
+    transform: rotate(45deg) translateY(-50%);
+}
+
+.checkbox-style {
+    display: flex;
+    width: fit-content;
+    margin-left: 10px;
+}
+.checkbox-style input {
+    width: 15px;
+}
+
+.widget-options #typeSelect {
+    padding-top: 15px;
+}
+
+.widget-options #typeSelect {
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 4px;
+}
+
+.customization-option .checkbox-style {
+    color: rgba(255, 255, 255, 1);
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+  }
+
+  /* Style the container for custom checkbox */
+.checkbox-style {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 18px;
+    user-select: none;
+  }
+  
+  /* Hide the default checkbox */
+  .checkbox-style input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkbox-style .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    border-radius: 4px;
+    margin-top: 2px;
+    margin-left: 2px;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .checkbox-style:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .checkbox-style input:checked ~ .checkmark {
+    background-color: #6675FF;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkbox-style .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .checkbox-style input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the "X" indicator */
+.checkbox-style .checkmark::before,
+.checkbox-style .checkmark::after {
+  content: '';
+  position: absolute;
+  height: 2.5px; /* X thickness */
+  width: 16px; /* X width */
+  background-color: white;
+}
+
+.checkbox-style .checkmark::before {
+  top: 9.5px; /* adjust top for alignment */
+  left: 2;
+  transform: rotate(45deg);
+}
+
+.checkbox-style .checkmark::after {
+  top: 9.5px; /* adjust top for alignment */
+  left: 2;
+  transform: rotate(-45deg);
+}
+
+/* Hide the "X" by default */
+.checkbox-style .checkmark::before,
+.checkbox-style .checkmark::after {
+  display: none;
+}
+
+/* Show the "X" when checked */
+.checkbox-style input:checked ~ .checkmark::before,
+.checkbox-style input:checked ~ .checkmark::after {
+  display: block;
 }

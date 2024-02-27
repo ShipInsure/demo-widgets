@@ -6,14 +6,26 @@ document.addEventListener('DOMContentLoaded', function() {
     // define/set variables
     var widget = document.getElementById('ShipInsureWidget');
     var card = document.getElementById('demoCard')
-    var colorInput = document.getElementById('colorInput');
+    let colorInput = document.getElementById('colorInput');
+    var switchLabel = document.querySelector('.switch-label');
     widgetSwitch = document.querySelector('.switch-input');
-
-    // default switch color
-    colorInput.value = '#6675FF'; 
 
     // switch toggle to 'on' on pageload
     widgetSwitch.checked = !widgetSwitch.checked; 
+
+    colorInput.value = '#6675FF'; 
+
+    var ecoCheckbox = document.querySelector('input[name="typeOption"][value="eco"]');
+    ecoCheckbox.addEventListener('change', function() {
+        if(this.checked) {
+            colorInput.value = "#09B825"
+            switchLabel.style.backgroundColor = colorInput.value
+        } else {
+            colorInput.value = '#6675FF';
+            switchLabel.style.backgroundColor = colorInput.value
+
+        }
+    });
 
     // handle dynamic switch coloring! We only want the switch colored when it's checked, but that can only be done
     // in CSS. So I use JS to dynamic set/unset the color depending on the state of the switch. This won't matter in
@@ -57,12 +69,25 @@ document.addEventListener('DOMContentLoaded', function() {
     /** Handle customization options */
     // Define a mapping from select IDs to their respective class names
     const classMapping = {
-        'modeSelect': { 'lightmode': 'lightmode', 'darkmode': 'darkmode' },
         'disclaimerSelect': { 'noDisclaimer': '', 'disclaimer': 'disclaimer' },
-        'sizeSelect': { 'normal': '', 'minimal': 'minimal' },
+        'typeSelect': { 'minimal': 'minimal', 'eco': 'eco', 'disclaimer': 'disclaimer', 'darkmode': 'darkmode' },
         'infoSelect': { 'infoModal': '', 'infoLink': 'info-link' },
-        'snapSelect': { 'snapRight': 'snap-right', 'snapLeft': 'snap-left'}
+        'snapSelect': { 'snapRight': 'snap-right', 'snapLeft': 'snap-left'},
+        'coverageSelect': { 'standard': '', 'full-coverage': 'full-coverage' }
     };
+
+    var darkmodeCheckbox = document.querySelector('input[name="typeOption"][value="darkmode"]');
+    darkmodeCheckbox.addEventListener('change', function() {
+        if(this.checked) {
+            // If the checkbox is checked, add the 'darkmode' class
+            card.classList.add('darkmode');
+            card.classList.remove('lightmode')
+        } else {
+            // If the checkbox is not checked, remove the 'darkmode' class
+            card.classList.remove('darkmode');
+            card.classList.add('lightmode')
+        }
+    });
 
     // Generic event handler for select change (so it applies to all the dropdowns)
     function handleSelectChange(event) {
@@ -73,12 +98,6 @@ document.addEventListener('DOMContentLoaded', function() {
         Object.values(classMapping[selectId]).forEach(className => {
             if (className) widget.classList.remove(className);
         });
-
-        // Special handling for modeSelect
-        if (selectId === 'modeSelect') {
-            card.classList.remove('lightmode', 'darkmode');
-            card.classList.add(classMapping[selectId][selectedValue]);
-        }
 
         // Additional logic to make sure 'disclaimer' and 'small' cannot be active at the same time
         if (selectId === 'sizeSelect' && selectedValue === 'minimal') {
@@ -99,6 +118,38 @@ document.addEventListener('DOMContentLoaded', function() {
     // Attach the event handler to each select element
     document.querySelectorAll('.customization-option select').forEach(selectElement => {
         selectElement.addEventListener('change', handleSelectChange);
+    });
+
+    document.querySelectorAll('#typeSelect input[type="checkbox"]').forEach(checkbox => {
+        checkbox.addEventListener('change', function(event) {
+            const selectedOption = event.target.value;
+            const isChecked = event.target.checked;
+    
+            // Clear class if unchecked
+            if (!isChecked) {
+                widget.classList.remove(classMapping['typeSelect'][selectedOption]);
+            } else {
+                // Add class if checked
+                if (classMapping['typeSelect'][selectedOption]) {
+                    widget.classList.add(classMapping['typeSelect'][selectedOption]);
+                }
+
+                // Logic to ensure "Disclaimer" and "Minimal" are not selected at the same time
+                if (selectedOption === 'minimal' && isChecked) {
+                    const disclaimerCheckbox = document.querySelector('input[type="checkbox"][value="disclaimer"]');
+                    if (disclaimerCheckbox && disclaimerCheckbox.checked) {
+                        disclaimerCheckbox.checked = false;
+                        widget.classList.remove(classMapping['typeSelect']['disclaimer']);
+                    }
+                } else if (selectedOption === 'disclaimer' && isChecked) {
+                    const minimalCheckbox = document.querySelector('input[type="checkbox"][value="minimal"]');
+                    if (minimalCheckbox && minimalCheckbox.checked) {
+                        minimalCheckbox.checked = false;
+                        widget.classList.remove(classMapping['typeSelect']['minimal']);
+                    }
+                }
+            }
+        });
     });
 
     // Handle resizing the widget demo card
