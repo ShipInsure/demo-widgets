@@ -547,7 +547,7 @@ body {
     cursor: pointer;
   }
 
-  /* Style the container for custom checkbox */
+ /* Style the container for custom checkbox */
 .checkbox-style {
     display: block;
     position: relative;
@@ -556,19 +556,19 @@ body {
     cursor: pointer;
     font-size: 18px;
     user-select: none;
-  }
-  
-  /* Hide the default checkbox */
-  .checkbox-style input {
+}
+
+/* Hide the default checkbox */
+.checkbox-style input {
     position: absolute;
     opacity: 0;
     cursor: pointer;
     height: 0;
     width: 0;
-  }
-  
-  /* Create a custom checkbox */
-  .checkbox-style .checkmark {
+}
+
+/* Create a custom checkbox */
+.checkbox-style .checkmark {
     position: absolute;
     top: 0;
     left: 0;
@@ -576,62 +576,33 @@ body {
     width: 20px;
     background-color: #eee;
     border-radius: 4px;
-    margin-top: 2px;
-    margin-left: 2px;
-  }
-  
-  /* On mouse-over, add a grey background color */
-  .checkbox-style:hover input ~ .checkmark {
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox-style:hover input ~ .checkmark {
     background-color: #ccc;
-  }
-  
-  /* When the checkbox is checked, add a blue background */
-  .checkbox-style input:checked ~ .checkmark {
-    background-color: #6675FF;
-  }
-  
-  /* Create the checkmark/indicator (hidden when not checked) */
-  .checkbox-style .checkmark:after {
-    content: "";
+}
+
+/* When the checkbox is checked, add a background */
+.checkbox-style input:checked ~ .checkmark {
+    background-color: #6675FF; /* Change to your desired color */
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkbox-style .checkmark::after {
+    content: '';
     position: absolute;
     display: none;
-  }
-  
-  /* Show the checkmark when checked */
-  .checkbox-style input:checked ~ .checkmark:after {
-    display: block;
-  }
-  
-  /* Style the "X" indicator */
-.checkbox-style .checkmark::before,
-.checkbox-style .checkmark::after {
-  content: '';
-  position: absolute;
-  height: 2.5px; /* X thickness */
-  width: 16px; /* X width */
-  background-color: white;
 }
 
-.checkbox-style .checkmark::before {
-  top: 9.5px; /* adjust top for alignment */
-  left: 2;
-  transform: rotate(45deg);
-}
-
-.checkbox-style .checkmark::after {
-  top: 9.5px; /* adjust top for alignment */
-  left: 2;
-  transform: rotate(-45deg);
-}
-
-/* Hide the "X" by default */
-.checkbox-style .checkmark::before,
-.checkbox-style .checkmark::after {
-  display: none;
-}
-
-/* Show the "X" when checked */
-.checkbox-style input:checked ~ .checkmark::before,
+/* Show the checkmark when checked */
 .checkbox-style input:checked ~ .checkmark::after {
-  display: block;
+    display: block;
+    left: 6.5px;
+    top: 3px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
 }
