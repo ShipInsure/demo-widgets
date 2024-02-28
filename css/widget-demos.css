@@ -104,8 +104,7 @@ body {
 .customization-option {
     margin-bottom: 10px;
     width: 287px;
-    height: 56px;
-    min-height: fit-content;
+    height: fit-content;
   }
   
   /* Custom arrow */
