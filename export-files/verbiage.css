@@ -1,0 +1,64 @@
+/* Verbiage CSS */
+
+.si-verbiage-placement-container {
+    /* placement rules */
+    margin: 5px 0px;
+    padding: 5px 0px;
+    min-width: fit-content;
+    width: 100%;
+}
+.si-verbiage-placement-container .si-verbiage-container {
+    font-family: 'Open Sans', Helvetica, Arial,  Roboto, Lato, sans-serif;
+    color:rgba(6, 0, 30);
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    min-width: 540px;
+    margin-left: -26px;
+}
+.si-verbiage-placement-container .si-verbiage-logo-and-name-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    border-right: 1px solid rgba(6, 0, 30);
+    padding-right: 0px;
+    margin-right: 5px;
+    min-width: 125px;
+}
+.si-verbiage-placement-container .si-verbiage-logo {
+    height: 17px;
+    width: 17px;
+    margin-right: 3px;
+}
+.si-verbiage-placement-container .si-verbiage-logo-returns {
+    height: 17px;
+    width: 17px;
+    margin-right: 4px;
+    margin-top: 2px;
+}
+.si-verbiage-placement-container .si-verbiage {
+    font-size: 14px;
+    display: inline;
+}
+.si-verbiage-placement-container .si-verbiage-leaf-and-info-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2px;
+    margin-top: -6px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.si-verbiage-placement-container .si-verbiage-leaf-icon {
+    margin-right: 0px;
+    margin-top: 1px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.si-verbiage-placement-container .infoPopupTag {
+    font-size: 10px;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+}

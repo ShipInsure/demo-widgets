@@ -25,10 +25,26 @@ body {
     padding: 50px 60px;
     color: white;
 }
+
+.demo-site-container .customization-bar-scroll-container {
+    width: fit-content;
+    max-height: calc(100vh - 140px);
+    overflow-y: auto;
+}
+
 .demo-site-container .customization-bar h1 {
     color: #FFF;
     font-family: 'Open Sans', Arial, Helvetica, sans-serif;
     font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 63px;
+    margin: 20px 0px 30px;
+}
+.demo-site-container .customization-bar h2 {
+    color: #FFF;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    font-size: 22px;
     font-style: normal;
     font-weight: 600;
     line-height: 63px;
@@ -576,6 +592,7 @@ body {
     width: 20px;
     background-color: #eee;
     border-radius: 4px;
+    margin-top: 1.5px;
 }
 
 /* On mouse-over, add a grey background color */
