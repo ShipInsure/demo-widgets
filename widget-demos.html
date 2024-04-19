@@ -1,6 +1,7 @@
 <link rel="stylesheet" type="text/css" href="css/widget-demos.css" />
 <link rel="stylesheet" type="text/css" href="css/modals.css" />
 <link rel="stylesheet" type="text/css" href="css/widgets.css" />
+<link rel="stylesheet" type="text/css" href="css/verbiage.css" />
 <script src="js/widget-demos.js"></script>
 <script src="js/modals.js"></script>
 <script src="js/widgets.js"></script>
@@ -8,7 +9,7 @@
 <div class="demo-site-container">
     <div class="flex-container left">
         <div class="customization-bar">
-            <svg width="133" height="30" viewBox="0 0 133 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg style="padding-bottom: 10px;" width="133" height="30" viewBox="0 0 133 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M46.1141 10.7301C45.7299 10.2798 45.2146 9.91658 44.5741 9.6374C43.9307 9.35821 43.2 9.22012 42.379 9.22012C41.1738 9.22012 40.2917 9.45428 39.7414 9.92559C39.1883 10.3969 38.9146 11.0333 38.9146 11.8409C38.9146 12.2641 38.9874 12.6124 39.1359 12.8825C39.2844 13.1527 39.5114 13.3899 39.82 13.588C40.1286 13.7861 40.5216 13.9573 41.0049 14.1044C41.4853 14.2515 42.053 14.3956 42.708 14.5396C43.4387 14.6988 44.0967 14.8759 44.6818 15.077C45.267 15.2751 45.7619 15.5243 46.1753 15.8215C46.5858 16.1187 46.9002 16.4789 47.1185 16.9022C47.3369 17.3255 47.4446 17.8538 47.4446 18.4903C47.4446 19.1267 47.3223 19.7001 47.0778 20.1774C46.8332 20.6547 46.4926 21.051 46.0559 21.3692C45.6192 21.6874 45.0981 21.9215 44.4955 22.0746C43.8929 22.2277 43.232 22.3028 42.5129 22.3028C40.3935 22.3028 38.5653 21.6213 37.0252 20.2584L37.6977 19.1267C37.9423 19.3909 38.2334 19.643 38.574 19.8802C38.9146 20.1173 39.2931 20.3275 39.7094 20.5046C40.1257 20.6847 40.5711 20.8228 41.0486 20.9219C41.5231 21.0209 42.0238 21.072 42.5508 21.072C43.6425 21.072 44.4926 20.8708 45.101 20.4656C45.7095 20.0633 46.0152 19.4509 46.0152 18.6284C46.0152 18.1901 45.9278 17.8238 45.7561 17.5266C45.5814 17.2294 45.3223 16.9713 44.9758 16.7521C44.6294 16.533 44.1985 16.3438 43.6862 16.1877C43.1738 16.0286 42.577 15.8695 41.8958 15.7104C41.1767 15.5393 40.5478 15.3592 40.0093 15.1731C39.4707 14.9869 39.0136 14.7558 38.641 14.4796C38.2683 14.2004 37.9889 13.8672 37.8025 13.4769C37.6162 13.0867 37.5231 12.6064 37.5231 12.039C37.5231 11.3906 37.6424 10.8112 37.8782 10.3008C38.117 9.7905 38.4517 9.36722 38.8884 9.03099C39.3251 8.69477 39.8375 8.4366 40.4285 8.25648C41.0195 8.07636 41.6745 7.9893 42.3936 7.9893C43.3048 7.9893 44.117 8.1304 44.8303 8.41559C45.5435 8.70078 46.1869 9.10004 46.7663 9.61638L46.1112 10.7271L46.1141 10.7301Z" fill="white"/>
                 <path d="M57.9745 22.1857H56.6645V16.4069C56.6645 15.2301 56.4694 14.3475 56.0764 13.7651C55.6834 13.1827 55.1099 12.8916 54.353 12.8916C53.9803 12.8916 53.6106 12.9666 53.2467 13.1197C52.8799 13.2728 52.5363 13.4799 52.2161 13.7441C51.8959 14.0083 51.6164 14.3205 51.3777 14.6777C51.1389 15.035 50.9643 15.4252 50.8478 15.8485V22.1827H49.5378V7.69211H50.8478V14.1854C51.2467 13.4049 51.7969 12.7895 52.5043 12.3392C53.2088 11.8889 53.9745 11.6637 54.7955 11.6637C55.3719 11.6637 55.861 11.7718 56.2598 11.991C56.6587 12.2101 56.9847 12.5133 57.2409 12.9036C57.4971 13.2938 57.6834 13.7651 57.7999 14.3145C57.9163 14.8639 57.9745 15.4703 57.9745 16.1307V22.1857Z" fill="white"/>
                 <path d="M60.7664 9.67642V7.69211H62.0765V9.67642H60.7664ZM60.7664 22.1857V11.8409H62.0765V22.1857H60.7664Z" fill="white"/>
@@ -20,65 +21,79 @@
                 <path d="M121.186 14.0833C120.403 14.0954 119.705 14.2515 119.087 14.5487C118.47 14.8459 118.028 15.2931 117.76 15.8875V22.1827H115.18V11.7778H117.547V14.0023C117.728 13.6451 117.937 13.3238 118.182 13.0387C118.427 12.7535 118.689 12.5073 118.971 12.2942C119.253 12.084 119.539 11.9189 119.827 11.8078C120.115 11.6968 120.395 11.6397 120.665 11.6397H120.983C121.052 11.6397 121.119 11.6457 121.183 11.6607V14.0833H121.186Z" fill="white"/>
                 <path d="M126.808 22.3839C125.999 22.3839 125.268 22.2428 124.613 21.9576C123.958 21.6724 123.399 21.2851 122.939 20.7958C122.476 20.3065 122.121 19.7361 121.871 19.0877C121.62 18.4392 121.495 17.7578 121.495 17.0433C121.495 16.3288 121.617 15.6024 121.862 14.9479C122.106 14.2935 122.459 13.7171 122.921 13.2218C123.384 12.7265 123.946 12.3332 124.607 12.042C125.268 11.7508 126.01 11.6037 126.831 11.6037C127.652 11.6037 128.389 11.7508 129.035 12.042C129.684 12.3332 130.235 12.7235 130.692 13.2128C131.146 13.7021 131.495 14.2725 131.731 14.9209C131.97 15.5693 132.086 16.2448 132.086 16.9473C132.086 17.1184 132.083 17.2835 132.077 17.4426C132.072 17.6017 132.054 17.7338 132.028 17.8389H124.229C124.266 18.2501 124.363 18.6134 124.517 18.9316C124.671 19.2498 124.869 19.52 125.114 19.7451C125.358 19.9703 125.635 20.1414 125.94 20.2615C126.249 20.3815 126.569 20.4416 126.904 20.4416C127.416 20.4416 127.903 20.3125 128.357 20.0543C128.811 19.7961 129.122 19.4569 129.291 19.0306L131.507 19.6671C131.134 20.4626 130.54 21.114 129.725 21.6214C128.91 22.1317 127.938 22.3869 126.808 22.3869V22.3839ZM129.425 16.1097C129.361 15.3292 129.082 14.7048 128.587 14.2335C128.092 13.7651 127.492 13.528 126.788 13.528C126.441 13.528 126.118 13.591 125.815 13.7171C125.512 13.8432 125.248 14.0173 125.018 14.2425C124.788 14.4676 124.598 14.7378 124.45 15.056C124.301 15.3742 124.217 15.7254 124.191 16.1097H129.428H129.425Z" fill="white"/>
                 <path d="M25.0366 6.44359L12.9277 0.58816C12.756 0.504467 12.5579 0.504467 12.3847 0.58816L0.369825 6.39794C0.143821 6.5075 0 6.74184 0 7.00053V22.9752C0 23.1045 0.0719104 23.2217 0.184912 23.2764L12.3847 29.1745C12.5564 29.2582 12.7546 29.2582 12.9277 29.1745L25.1276 23.2764C25.2406 23.2217 25.3125 23.1045 25.3125 22.9752V13.5712L28.5793 11.9916C28.7612 11.9034 28.8214 11.666 28.704 11.4971L25.49 6.83467C25.3741 6.66576 25.2171 6.53185 25.0366 6.44359ZM12.9277 1.46161L22.8807 6.27469C23.1273 6.39338 23.1273 6.75858 22.8807 6.87727L12.9277 11.6904C12.756 11.774 12.5579 11.774 12.3847 11.6904L2.43175 6.87727C2.1852 6.75858 2.1852 6.39338 2.43175 6.27469L12.3847 1.46161C12.5564 1.37791 12.7546 1.37791 12.9277 1.46161ZM18.0774 20.3046C17.8514 20.4142 17.7076 20.6485 17.7076 20.9072V25.9881L14.0167 27.773C13.8039 27.8765 13.5602 27.7152 13.5602 27.4717V14.0064L16.1167 17.7147C16.2063 17.8456 16.3736 17.8897 16.513 17.8227L24.407 14.0064V22.5369C24.407 22.6663 24.3351 22.7834 24.2221 22.8382L21.3222 24.2412V19.2577C21.3222 19.0142 21.0786 18.8529 20.8658 18.9564" fill="white"/>
-            </svg>                
-            <h1>Widget Design</h1>
-            <div class="customization-option">
-                <div class="select-style">
-                    <div class="select-label">Coverage</div>
-                    <select id="coverageSelect">
-                        <option value="standard">Standard</option>
-                        <option value="full-coverage">Full Coverage</option>
-                    </select>
-                </div>
-            </div>
-            <div class="customization-option widget-options">
-                <div class="select-style">
-                    <div class="select-label">Widget Options</div>
-                    <div id="typeSelect">
-                        <label class="checkbox-style">Minimal
-                            <input type="checkbox" name="typeOption" value="minimal"> 
-                            <span class="checkmark"></span>
-                        </label>
-                        <label class="checkbox-style">Eco
-                            <input type="checkbox" name="typeOption" value="eco"> 
-                            <span class="checkmark"></span>
-                        </label>
-                        <label class="checkbox-style">Disclaimer
-                            <input type="checkbox" name="typeOption" value="disclaimer"> 
-                            <span class="checkmark"></span>
-                        </label>
-                        <label class="checkbox-style">Darkmode
-                            <input type="checkbox" name="typeOption" value="darkmode">
-                            <span class="checkmark"></span>
-                        </label>
+            </svg>
+            <div class="customization-bar-scroll-container">
+                <h1>Widget Design</h1>
+                <div class="customization-option">
+                    <div class="select-style">
+                        <div class="select-label">Coverage</div>
+                        <select id="coverageSelect">
+                            <option value="standard">Standard</option>
+                            <option value="full-coverage">Full Coverage</option>
+                        </select>
                     </div>
                 </div>
-            </div>
-            <div class="customization-option">
-                <div class="input-style">
-                    <div class="input-label">Switch Color</div>
-                    <input type="text" id="colorInput" placeholder="#000000">
+                <div class="customization-option widget-options">
+                    <div class="select-style">
+                        <div class="select-label">Widget Options</div>
+                        <div id="typeSelect">
+                            <label class="checkbox-style">Minimal
+                                <input type="checkbox" name="typeOption" value="minimal"> 
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="checkbox-style">Eco
+                                <input type="checkbox" name="typeOption" value="eco"> 
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="checkbox-style">Disclaimer
+                                <input type="checkbox" name="typeOption" value="disclaimer"> 
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="checkbox-style">Darkmode
+                                <input type="checkbox" name="typeOption" value="darkmode">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="customization-option">
-                <div class="select-style">
-                    <div class="select-label">Snap Option</div>
-                    <select id="snapSelect">
-                        <option value="snapRight">Snap Right</option>
-                        <option value="snapLeft">Snap Left</option>
-                    </select>
+                <div class="customization-option">
+                    <div class="input-style">
+                        <div class="input-label">Switch Color</div>
+                        <input type="text" id="colorInput" placeholder="#000000">
+                    </div>
                 </div>
-            </div>
-            <!-- More Info Option - disabing this for now since I don't want to use it -->
-            <!-- <div class="customization-option">
-                <div class="select-style">
-                    <div class="select-label">More Info Option</div>
-                    <select id="infoSelect">
-                        <option value="infoModal">Info Popup</option>
-                        <option value="infoLink">Info Link</option>
-                    </select>
+                <div class="customization-option">
+                    <div class="select-style">
+                        <div class="select-label">Snap Option</div>
+                        <select id="snapSelect">
+                            <option value="snapRight">Snap Right</option>
+                            <option value="snapLeft">Snap Left</option>
+                        </select>
+                    </div>
                 </div>
-            </div> -->
+                <!-- More Info Option - disabing this for now since I don't want to use it -->
+                <!-- <div class="customization-option">
+                    <div class="select-style">
+                        <div class="select-label">More Info Option</div>
+                        <select id="infoSelect">
+                            <option value="infoModal">Info Popup</option>
+                            <option value="infoLink">Info Link</option>
+                        </select>
+                    </div>
+                </div> -->
+                <!-- <h2>Product Page Verbiage</h2>
+                <div class="customization-option widget-options">
+                    <div class="select-style">
+                        <div class="select-label">View Verbiage</div>
+                        <div id="typeSelect">
+                            <label class="checkbox-style">View Verbiage
+                                <input type="checkbox" name="typeOption" value="minimal"> 
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
         </div>
     </div>
     <div class="flex-container right">
@@ -158,6 +173,41 @@
                         <div class="mock-checkout-button">
                             CHECKOUT
                         </div> 
+
+                        <!-- <div class="si-verbiage-container">
+                            <div class="si-verbiage-logo-and-name-container">
+                                <svg class="si-verbiage-logo" width="17" height="24" viewBox="0 0 17 24" xmlns="http://www.w3.org/2000/svg">
+                                    <rect class="si-logo-rect" y="10.0851" width="16.1622" height="13.0541" rx="1.24324"/>
+                                    <path class="si-logo-stroke" d="M3.10815 15.3689V6.977C3.10815 4.2305 5.33463 2.00403 8.08113 2.00403V2.00403C10.8276 2.00403 13.0541 4.2305 13.0541 6.977V15.3689" stroke-width="2.48649"/>
+                                    <path class="si-logo-fill" d="M11.4657 14.6027L8.32556 13.2082C8.28104 13.1883 8.22966 13.1883 8.18475 13.2082L5.06893 14.5918C5.01032 14.6179 4.97302 14.6737 4.97302 14.7353V18.5397C4.97302 18.5705 4.99167 18.5984 5.02098 18.6115L8.18475 20.0161C8.22928 20.0361 8.28066 20.0361 8.32556 20.0161L11.4893 18.6115C11.5186 18.5984 11.5373 18.5705 11.5373 18.5397V16.3001L12.3845 15.924C12.4317 15.903 12.4473 15.8464 12.4168 15.8062L11.5833 14.6958C11.5533 14.6556 11.5126 14.6237 11.4657 14.6027ZM8.32556 13.4162L10.9067 14.5625C10.9706 14.5907 10.9706 14.6777 10.9067 14.706L8.32556 15.8522C8.28104 15.8721 8.22966 15.8721 8.18475 15.8522L5.60365 14.706C5.53971 14.6777 5.53971 14.5907 5.60365 14.5625L8.18475 13.4162C8.22928 13.3963 8.28066 13.3963 8.32556 13.4162ZM9.66103 17.9037C9.60242 17.9298 9.56512 17.9856 9.56512 18.0472V19.2573L8.60796 19.6824C8.55277 19.707 8.4896 19.6686 8.4896 19.6106V16.4038L9.15257 17.2869C9.17578 17.3181 9.21917 17.3286 9.25533 17.3127L11.3025 16.4038V18.4354C11.3025 18.4662 11.2838 18.4941 11.2545 18.5071L10.5025 18.8412V17.6544C10.5025 17.5964 10.4393 17.558 10.3841 17.5826"/>
+                                </svg>
+                                Ship<span style="font-weight:bold;margin-right:-20px;">Insure</span>
+                            </div>
+                            
+                            <div class="si-verbiage">
+                                Protect your package
+                                <div class="si-verbiage-leaf-and-info-container">
+                                    <svg class="si-verbiage-leaf-icon" width="12" height="13" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.2199 2.69133C12.2137 2.5843 12.1684 2.48329 12.0925 2.40748C12.0167 2.33167 11.9157 2.28633 11.8087 2.28008C7.64533 2.03563 4.31049 3.28906 2.88861 5.64063C2.39575 6.44503 2.15288 7.37769 2.1908 8.32031C2.21555 8.9231 2.3382 9.51785 2.55393 10.0813C2.5666 10.1159 2.58785 10.1468 2.61568 10.1711C2.64352 10.1953 2.67704 10.2121 2.71312 10.2199C2.74921 10.2278 2.78668 10.2263 2.82205 10.2157C2.85742 10.2051 2.88954 10.1858 2.91541 10.1595L7.56385 5.43992C7.6045 5.39928 7.65275 5.36703 7.70586 5.34503C7.75897 5.32304 7.81589 5.31171 7.87338 5.31171C7.93086 5.31171 7.98779 5.32304 8.0409 5.34503C8.09401 5.36703 8.14226 5.39928 8.18291 5.43992C8.22356 5.48057 8.2558 5.52883 8.2778 5.58194C8.2998 5.63505 8.31112 5.69197 8.31112 5.74946C8.31112 5.80694 8.2998 5.86386 8.2778 5.91697C8.2558 5.97008 8.22356 6.01834 8.18291 6.05899L3.10299 11.2155L2.32697 11.9915C2.24627 12.0701 2.19809 12.1761 2.19201 12.2886C2.18593 12.4011 2.2224 12.5117 2.29416 12.5985C2.33346 12.644 2.38173 12.681 2.43594 12.707C2.49015 12.733 2.54914 12.7476 2.60923 12.7498C2.66933 12.752 2.72923 12.7418 2.7852 12.7198C2.84118 12.6978 2.89202 12.6645 2.93455 12.622L3.85275 11.7038C4.62604 12.0779 5.40643 12.2819 6.18025 12.3092C6.24114 12.3114 6.30184 12.3125 6.36236 12.3125C7.2436 12.3148 8.10812 12.072 8.8594 11.6114C11.211 10.1895 12.4649 6.85524 12.2199 2.69133Z" fill="#1BB333"/>
+                                    </svg>
+                                    <span class="infoPopupTag">&#9432;</span>
+                                </div>
+                            </div>
+                        </div> -->
+
+                        <!-- RETURNS LOGO FOR VERBIAGE -->
+
+                        <!-- <svg class="si-verbiage-logo-returns" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 40 40" style="enable-background:new 0 0 40 40;" xml:space="preserve">
+                            <style type="text/css">
+                                .st0{fill:#06001E;}
+                            </style>
+                            <g>
+                                <path class="st0" d="M27.1,16.6l-6.3-3.1c-0.1,0-0.2,0-0.3,0l-6.3,3c-0.1,0.1-0.2,0.2-0.2,0.3v8.3c0,0.1,0,0.1,0.1,0.2l6.4,3.1   c0.1,0,0.2,0,0.3,0l6.4-3.1c0.1,0,0.1-0.1,0.1-0.2v-4.9l1.7-0.8c0.1,0,0.1-0.2,0.1-0.3l-1.7-2.4C27.2,16.7,27.2,16.6,27.1,16.6z    M20.5,19.3l-5.2-2.5c-0.1-0.1-0.1-0.3,0-0.3l5.2-2.5c0.1,0,0.2,0,0.3,0l5.2,2.5c0.1,0.1,0.1,0.3,0,0.3l-5.2,2.5   C20.7,19.4,20.5,19.4,20.5,19.3z M26.7,25c0,0.1,0,0.1-0.1,0.2l-1.5,0.7v-2.6c0-0.1-0.1-0.2-0.2-0.2l-1.5,0.7   c-0.1,0.1-0.2,0.2-0.2,0.3v2.7l-1.9,0.9c-0.1,0.1-0.2,0-0.2-0.2v-7l1.3,1.9c0,0.1,0.1,0.1,0.2,0.1l4.1-2V25z"/>
+                                <path class="st0" d="M2,20c0-9.9,8.1-18,18-18c6.7,0,12.8,3.7,15.9,9.6h-5.5c-0.6,0-1,0.4-1,1s0.4,1,1,1h8.3c0.6,0,1-0.4,1-1V4.3   c0-0.6-0.4-1-1-1s-1,0.4-1,1v6.3C34.2,4.1,27.4,0,20,0C9,0,0,9,0,20c0,0.6,0.4,1,1,1S2,20.6,2,20z"/>
+                                <path class="st0" d="M39,19c-0.6,0-1,0.4-1,1c0,9.9-8.1,18-18,18c-6.7,0-12.8-3.7-15.9-9.6h5.5c0.6,0,1-0.4,1-1s-0.4-1-1-1H1.3   c-0.6,0-1,0.4-1,1v8.3c0,0.6,0.4,1,1,1s1-0.4,1-1v-6.3C5.8,35.9,12.6,40,20,40c11,0,20-9,20-20C40,19.4,39.6,19,39,19z"/>
+                            </g>
+                        </svg> -->
+
                     </div> <!-- end content container -->
                     <div class="resize-handle"></div>
                 </div> <!-- end demo card-->
