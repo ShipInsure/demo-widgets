@@ -4,6 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&display=swap');
 
 /* General widget css */
 .shipinsure {
@@ -19,7 +20,7 @@
 }
 
 .si-widget .si-widget-container {
-    font-family: 'Open Sans', Helvetica, Arial,  Roboto, Lato, sans-serif;
+    font-family: 'Cormorant Garamond', 'Open Sans', Helvetica, Arial,  Roboto, Lato, sans-serif;
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -85,7 +86,7 @@
 
 .si-widget .si-header {
     color:#06001E;
-    font-family: 'Montserrat', 'Open Sans', Arial, Helvetica, sans-serif;
+    font-family:  'Cormorant Garamond', 'Montserrat', 'Open Sans', Arial, Helvetica, sans-serif;
     font-size: 18px;
     font-style: normal;
     font-weight: 700;
@@ -145,13 +146,14 @@
 
 .si-widget .si-switch-and-price-container .shipinsureAmount {
     color: #06001E;
-    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-    font-size: 13px;
+    font-family: 'Cormorant Garamond', 'Open Sans', Arial, Helvetica, sans-serif;
+    font-size: 14.5px;
     font-style: normal;
     font-weight: 700;
     line-height: 16px;
     letter-spacing: 0.25px;
     margin-right: 2px;
+    margin-top:-0.5px;
 }
 
 
@@ -163,7 +165,7 @@
     display: inline-block;
     vertical-align: top;
     width: 34px;
-    height: 18px;
+    height: 17px;
     -moz-border-radius: 18px;
     -webkit-border-radius: 18px;
     border-radius: 100px;
@@ -224,7 +226,7 @@
     opacity: 0;
   }
   .si-widget .switch-input:checked ~ .switch-label {
-    background: #6675FF;
+    background: #AC3035;
   }
   .si-widget .switch-input:checked ~ .switch-label::before {
     opacity: 0;
@@ -234,7 +236,7 @@
   }
   .si-widget .switch-handle {
     position: absolute;
-    top: 4px;
+    top: 3.5px;
     left: 4px;
     width: 10px;
     height: 10px;
@@ -268,7 +270,7 @@
     background-image: linear-gradient(to bottom, #D3D3D3, D3D3D3);
   }
   .si-widget .switch-input:checked ~ .switch-handle {
-    top: 4px;
+    top: 3.5px;
     left: 20px;
 }
 
@@ -298,14 +300,14 @@
     padding-left: 5px;
 }
 .si-widget.minimal .si-logo {
-    width: 17px;
-    height: 29px;
+    width: 19px;
+    height: 30px;
 }
 .si-widget.minimal .si-header {
     font-size: 17px;
 }
 .si-widget.minimal .si-switch-and-price-container {
-    flex-direction: row-reverse;
+    flex-direction: row;
     gap: 4px;
 }
 .si-widget.minimal .si-leaf-icon, .si-widget.minimal.info-link .si-header .infoPopupTag {
@@ -313,7 +315,7 @@
 }
 .si-widget.minimal.info-link .si-header .infoLink, .si-widget.minimal .si-header .infoPopupTag {
     display: block;
-    font-size: 9px;
+    font-size: 7px;
 }
 .si-widget.minimal .switch {
     margin: 0px;
