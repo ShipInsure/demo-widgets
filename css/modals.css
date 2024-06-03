@@ -24,7 +24,7 @@
     padding: 0px;
     border: none;
     width: 690px;
-    height: 870px;
+    height: 855px;
     border-radius: 32px;
     background: #FFF;
     box-shadow: 0px 8px 42.3px 6px rgba(0, 0, 0, 0.10);
@@ -50,14 +50,14 @@
   }
 
 .si-modal-top {
-    background: linear-gradient(-45deg, #6675FF, #8a8ed6, #3E3D6A, #7a75d6);
+    /* background: linear-gradient(-45deg, #6675FF, #8a8ed6, #3E3D6A, #7a75d6); */
     background-size: 400% 400%;
     animation: gradientBackground 20s ease infinite;
     width: 100%;
     height: 314px;
     border-top-right-radius: 32px;
     border-top-left-radius: 32px;
-    border-bottom: 14px solid #6675FF;
+    /* border-bottom: 14px solid #6675FF; */
     position: relative;
 }
 
@@ -84,7 +84,7 @@
     color: transparent;
 }
 .si-modal-bottom {
-    padding: 50px 70px;
+    padding: 40px 70px;
 }
 .si-modal-header {
     color: rgba(6, 0, 30, 0.75);
@@ -129,7 +129,7 @@
     margin-left: 15px;
 }
 .si-modal-info-block-right {
-    color: #6675FF;
+    color: #C8ACA3;
     font-family: 'Open Sans', Arial, Helvetica, sans-serif;
     font-size: 15.861px;
     font-style: normal;
@@ -169,11 +169,11 @@
 
 /* The Close Button */
 .si-modal-close {
-    color: #fff;
+    color: rgba(6, 0, 30, 0.75);
     position: absolute;
-    right: 0px;
+    right: 4px;
     top: -4px;
-    font-size: 28px;
+    font-size: 35px;
     font-weight: lighter;
     margin-top: 10px;
     margin-right: 20px;
@@ -181,7 +181,6 @@
 
 .si-modal-close:hover,
 .si-modal-close:focus {
-    font-weight:bold;
     text-decoration: none;
     cursor: pointer;
 }
@@ -190,11 +189,11 @@
 @media screen and (max-width:720px) {
     .si-modal-content {
         max-width: 344px;
-        max-height: 575px;
+        max-height: 565px;
     }
     .si-modal-top {
         max-height: 158px;
-        border-bottom: 6px solid #6675FF;
+        /* border-bottom: 6px solid #6675FF; */
     }
     .si-modal .si-logo {
         width: 72px;
@@ -206,7 +205,7 @@
         font-size: 24px;
     }
     .si-modal-bottom {
-        padding: 40px 20px;
+        padding: 25px 20px;
     }
     .si-modal-content .si-modal-info-check {
         width: 16px;

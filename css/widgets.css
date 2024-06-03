@@ -56,6 +56,11 @@
     white-space: normal;
 }
 
+.si-widget .mg-logo {
+    width: 30px;
+    margin-top:-2px;
+}
+
 .si-widget .si-logo {
     width: 28.5px;
     height: 46px;
@@ -88,7 +93,7 @@
     font-family: 'Montserrat', 'Open Sans', Arial, Helvetica, sans-serif;
     font-size: 18px;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     line-height: 26.377px;
     margin-bottom: 0px;
     display: flex;
@@ -103,7 +108,7 @@
     font-family: 'Open Sans', Arial, Helvetica, sans-serif;
     font-size: 12px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 20px;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
@@ -224,7 +229,7 @@
     opacity: 0;
   }
   .si-widget .switch-input:checked ~ .switch-label {
-    background: #6675FF;
+    background: #C8ACA3;
   }
   .si-widget .switch-input:checked ~ .switch-label::before {
     opacity: 0;
