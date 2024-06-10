@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function() {
         'disclaimerSelect': { 'noDisclaimer': '', 'disclaimer': 'disclaimer' },
         'typeSelect': { 'minimal': 'minimal', 'eco': 'eco', 'disclaimer': 'disclaimer', 'darkmode': 'darkmode' },
         'infoSelect': { 'infoModal': '', 'infoLink': 'info-link' },
-        'snapSelect': { 'snapRight': 'snap-right', 'snapLeft': 'snap-left'},
+        'snapSelect': { 'snapRight': 'snap-right', 'snapLeft': 'snap-left', 'snapSplit': 'snap-split'},
         'coverageSelect': { 'standard': '', 'full-coverage': 'full-coverage' }
     };
 
@@ -241,7 +241,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Create a function to apply or remove styles based on width
     function handleDynamicWidgetWidth() {
-        if (card.offsetWidth > 520) {
+        if (card.offsetWidth > 520 && !siWidget.classList.contains('snap-split')) {
             if (siWidget.classList.contains('snap-left')) {
                 siWidget.style.maxWidth = '335px';
                 siWidget.style.marginRight = 'auto';
