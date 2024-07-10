@@ -57,9 +57,9 @@
 }
 
 .si-widget .si-logo {
-    width: 28.5px;
-    height: 46px;
-    margin-top: -1px;
+    width: 24.5px;
+    height: 41px;
+    /* margin-top: -0.5px; */
 }
 .si-logo-rect {
     fill: #06001E !important;
@@ -86,11 +86,12 @@
 .si-widget .si-header {
     color:#06001E;
     font-family: 'Montserrat', 'Open Sans', Arial, Helvetica, sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 700;
-    line-height: 26.377px;
+    /* line-height: 25px; */
     margin-bottom: 0px;
+    margin-top: 4px;
     display: flex;
     align-items: center;
     text-rendering: optimizeLegibility;
@@ -101,7 +102,7 @@
 .si-widget .si-sub-header {
     color:rgba(6, 0, 30, 0.50);
     font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-    font-size: 12px;
+    font-size: 10.5px;
     font-style: normal;
     font-weight: 600;
     line-height: 20px;
@@ -139,14 +140,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 6px;
+    gap: 0px;
     margin-top: 1px;
 }
 
 .si-widget .si-switch-and-price-container .shipinsureAmount {
     color: #06001E;
     font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-    font-size: 13px;
+    font-size: 11px;
     font-style: normal;
     font-weight: 700;
     line-height: 16px;
@@ -162,15 +163,15 @@
     position: relative;
     display: inline-block;
     vertical-align: top;
-    width: 34px;
-    height: 18px;
+    width: 30px;
+    height: 15px;
     -moz-border-radius: 18px;
     -webkit-border-radius: 18px;
     border-radius: 100px;
     cursor: pointer;
     flex: 0 0 31px;
     padding: 0px;
-    margin: 1.5px 0px -14px 0px;
+    margin: 5px 0px -14px 0px;
     background-color: transparent;
   }
   
@@ -234,12 +235,12 @@
   }
   .si-widget .switch-handle {
     position: absolute;
-    top: 4px;
-    left: 4px;
-    width: 10px;
-    height: 10px;
+    top: 5.5px;
+    left: 6px;
+    width: 6px;
+    height: 6px;
     background: white;
-    -moz-border-radius: 11px;
+    -moz-border-radius:11px;
     -webkit-border-radius: 11px;
     border-radius: 11px;
     -webkit-transition: left 0.15s ease-out;
@@ -253,8 +254,8 @@
     top: 50%;
     left: 50%;
     margin: -6px 0 0 -6px;
-    width: 12px;
-    height: 12px;
+    width: 10px;
+    height: 10px;
     background: #f9f9f9;
     -moz-border-radius: 6px;
     -webkit-border-radius: 6px;
@@ -268,7 +269,7 @@
     background-image: linear-gradient(to bottom, #D3D3D3, D3D3D3);
   }
   .si-widget .switch-input:checked ~ .switch-handle {
-    top: 4px;
+    top: 5.5px;
     left: 20px;
 }
 
