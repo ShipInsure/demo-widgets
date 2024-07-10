@@ -61,6 +61,13 @@
     height: 41px;
     /* margin-top: -0.5px; */
 }
+
+.si-widget.disclaimer .si-logo  {
+    width: 20px;
+    height: 30px;
+    margin-top: 5px;
+}
+
 .si-logo-rect {
     fill: #06001E !important;
 }
