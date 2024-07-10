@@ -299,15 +299,18 @@
     padding-left: 5px;
 }
 .si-widget.minimal .si-logo {
-    width: 17px;
-    height: 29px;
+    /* width: 15px;
+    height: 27px;
+    margin-top: 1.5px; */
+    display: none;
 }
 .si-widget.minimal .si-header {
-    font-size: 17px;
+    font-size: 16px;
 }
 .si-widget.minimal .si-switch-and-price-container {
     flex-direction: row-reverse;
     gap: 4px;
+    margin-bottom: -2px;
 }
 .si-widget.minimal .si-leaf-icon, .si-widget.minimal.info-link .si-header .infoPopupTag {
     display: none;
@@ -320,7 +323,7 @@
     margin: 0px;
 }
 .si-widget.minimal .switch-label {
-    /* width: 35px; */
+    width: 27px;
 }
 .si-widget.minimal .switch-input:checked ~ .switch-handle {
     left: 17px;
@@ -379,9 +382,17 @@
     margin: auto;
 }
 
+/* Full Coverage Minimal */
+.si-widget.full-coverage.minimal .si-full-coverage {
+    width: 46;
+    height: 17px;
+    font-size: 10.5px;
+    margin-bottom: -0.25px;
+}
+
 /* Eco */
 #ShipInsureWidget.eco {
-    padding: 10px 10px 8px;
+    padding: 8px 8px 8px 6px;
 }
 .si-widget .si-logo.si-leaf-icon {
     display: none;
@@ -389,9 +400,10 @@
 .si-widget.eco .si-logo {
     display: none;
 }
-.si-widget.eco .si-leaf-icon {
+/* .si-widget.eco .si-leaf-icon {
     display: none;
-}
+} */
+
 .si-widget .si-sub-header.si-sub-header-eco {
     display: none;
 }
@@ -408,12 +420,20 @@
 .si-widget.minimal.eco .si-sub-header.si-sub-header-eco {
     display: none;
 }
-.si-widget.eco .si-logo.si-leaf-icon {
+/* .si-widget.eco .si-logo.si-leaf-icon {
     display: block;
     width: 36px;
     height: 44px;
     margin-left: -3px;
     margin-right: -2px;
+} */
+
+#ShipInsureWidget.minimal.eco {
+    padding-top: 7px;
+}
+.si-widget.minimal.eco .si-header {
+    margin-bottom: 0px;
+    /* margin-top: -0.05px; */
 }
 .si-widget.minimal.eco .si-logo.si-leaf-icon {
     height: 30px;
