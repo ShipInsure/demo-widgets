@@ -57,8 +57,13 @@
     height: 314px;
     border-top-right-radius: 32px;
     border-top-left-radius: 32px;
-    border-bottom: 14px solid #6675FF;
+    border-bottom: 14px solid #99C93C;
     position: relative;
+}
+
+.si-modal-top img {
+    border-top-right-radius: 32px;
+    border-top-left-radius: 32px;
 }
 
 .si-modal .si-logo {
@@ -67,6 +72,7 @@
     left: 75px;
     height: 148px;
     width: 104px;
+    display: none;
 }
 
 .si-modal .si-logo-rect {
@@ -129,7 +135,7 @@
     margin-left: 15px;
 }
 .si-modal-info-block-right {
-    color: #6675FF;
+    color: #000000;
     font-family: 'Open Sans', Arial, Helvetica, sans-serif;
     font-size: 15.861px;
     font-style: normal;
@@ -194,7 +200,7 @@
     }
     .si-modal-top {
         max-height: 158px;
-        border-bottom: 6px solid #6675FF;
+        border-bottom: 6px solid #99C93C;
     }
     .si-modal .si-logo {
         width: 72px;
