@@ -232,7 +232,7 @@
     opacity: 0;
   }
   .si-widget .switch-input:checked ~ .switch-label {
-    background: #6675FF;
+    background: #FAA902;
   }
   .si-widget .switch-input:checked ~ .switch-label::before {
     opacity: 0;
@@ -504,4 +504,15 @@
     /* Add small adjustments here */
     /* margin-bottom: 10px; */ /* add space below */
     /* margin-top: 10px; */ /* add space above */
+}
+.powered-by-si-header-div {
+    display: flex;
+    justify-content: space-evenly;
+    /* margin-top: 1px; */
+}
+.powered-by-si-header-div svg {
+    margin-top: 3px;
+}
+.powered-by-si-header-div span {
+    font-size: 10px;
 }
