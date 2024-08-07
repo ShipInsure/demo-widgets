@@ -1,5 +1,6 @@
 /* Modals CSS */
 
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
 
 
 /* MODAL */
@@ -91,12 +92,13 @@
 }
 .si-modal-header {
     color: rgba(6, 0, 30, 0.75);
-    font-family: 'Montserrat', 'Open Sans', Arial, Helvetica, sans-serif;
-    font-size: 42.847px;
+    font-family: 'Open Sans', 'Montserrat', Arial, Helvetica, sans-serif;
+    font-size: 28px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 600;
     line-height: normal;
     letter-spacing: -0.001px;
+    text-align: center;
 }
 .si-modal-header span {
     font-weight: 700;
@@ -121,25 +123,39 @@
     width: 26px;
     height: 26px;
 }
-.si-modal-info-block-left {
-    color: #06001E;
-    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-    font-size: 19.26px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 22.659px; /* 117.647% */
-    letter-spacing: 0.17px;
-    margin-left: 15px;
+.si-modal-info-block-container {
+    display: flex;
+    justify-content: space-evenly;
+    min-width: 100%;
 }
-.si-modal-info-block-right {
-    color: #522398;
+.si-modal-info-block-container span {
+    height: 100%;
+    width: 0px;
+    margin: 3px;
+    margin-right: 10px;
+    border: 1px solid #522398;
+}
+.si-modal-info-block-left {
+    color: #1B1B1B;
     font-family: 'Open Sans', Arial, Helvetica, sans-serif;
     font-size: 15.861px;
     font-style: normal;
     font-weight: 400;
     line-height: 22.659px; /* 142.857% */
     letter-spacing: 0.283px;
-    margin-left: 3px;
+    width: 190px;
+    margin-left: 15px;
+}
+.si-modal-info-block-right {
+    color: #1B1B1B;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    font-size: 15.861px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22.659px; /* 142.857% */
+    letter-spacing: 0.283px;
+    width: 230px;
+
 }
 .si-modal-links {
     width: fit-content;
@@ -211,6 +227,7 @@
     }
     .si-modal-header {
         font-size: 24px;
+        font-family: 'Open Sans'
     }
     .si-modal-bottom {
         padding: 40px 20px;
