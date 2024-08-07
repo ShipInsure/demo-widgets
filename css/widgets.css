@@ -91,7 +91,7 @@
 }
 
 .si-widget .si-header {
-    color:#06001E;
+    color:white;
     font-family: 'Montserrat', 'Open Sans', Arial, Helvetica, sans-serif;
     font-size: 16px;
     font-style: normal;
@@ -107,7 +107,7 @@
 }
 
 .si-widget .si-sub-header {
-    color:rgba(6, 0, 30, 0.50);
+    color:white;
     font-family: 'Open Sans', Arial, Helvetica, sans-serif;
     font-size: 10.5px;
     font-style: normal;
@@ -152,7 +152,7 @@
 }
 
 .si-widget .si-switch-and-price-container .shipinsureAmount {
-    color: #06001E;
+    color: white;
     font-family: 'Open Sans', Arial, Helvetica, sans-serif;
     font-size: 11px;
     font-style: normal;
@@ -232,7 +232,7 @@
     opacity: 0;
   }
   .si-widget .switch-input:checked ~ .switch-label {
-    background: #6675FF;
+    background: #99C93C;
   }
   .si-widget .switch-input:checked ~ .switch-label::before {
     opacity: 0;
@@ -263,7 +263,7 @@
     margin: -6px 0 0 -6px;
     width: 10px;
     height: 10px;
-    background: #f9f9f9;
+    background: white;
     -moz-border-radius: 6px;
     -webkit-border-radius: 6px;
     border-radius: 6px;
@@ -285,6 +285,7 @@
 /* Disclaimer */
 .si-widget.disclaimer .si-disclaimer {
     display: block;
+    color: white;
 }
 
 .si-widget.disclaimer .si-sub-header {
@@ -463,7 +464,7 @@
 }
 
 .si-widget.eco .si-switch-and-price-container .shipinsureAmount {
-    color: #06001E;
+    color: #000000;
 }
 
 .si-widget.eco .si-sub-header {
@@ -499,3 +500,9 @@
 }
 
 /* RESPONSIVE */
+
+.shipinsure {
+    /* Add small adjustments here */
+    /* margin-bottom: 10px; */ /* add space below */
+    /* margin-top: 10px; */ /* add space above */
+}

@@ -276,11 +276,11 @@ body {
 }
 
 .demo-card.lightmode {
-    background-color: white;
+    background-color: #434343;
 }
 
 .demo-card.lightmode .mock-checkout-button {
-    background-color: #06001E;
+    background-color: #99C93C;
     color: white;
 }
 
