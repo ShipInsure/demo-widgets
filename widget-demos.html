@@ -24,15 +24,6 @@
             </svg>
             <div class="customization-bar-scroll-container">
                 <h1>Widget Design</h1>
-                <div class="customization-option">
-                    <div class="select-style">
-                        <div class="select-label">Coverage</div>
-                        <select id="coverageSelect">
-                            <option value="standard">Standard</option>
-                            <option value="full-coverage">Full Coverage</option>
-                        </select>
-                    </div>
-                </div>
                 <div class="customization-option widget-options">
                     <div class="select-style">
                         <div class="select-label">Widget Options</div>
@@ -45,15 +36,28 @@
                                 <input type="checkbox" name="typeOption" value="eco"> 
                                 <span class="checkmark"></span>
                             </label>
-                            <label class="checkbox-style">Disclaimer
-                                <input type="checkbox" name="typeOption" value="disclaimer"> 
-                                <span class="checkmark"></span>
-                            </label>
                             <label class="checkbox-style">Darkmode
                                 <input type="checkbox" name="typeOption" value="darkmode">
                                 <span class="checkmark"></span>
                             </label>
+                            <label class="checkbox-style">Disclaimer
+                                <input type="checkbox" name="typeOption" value="disclaimer"> 
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="checkbox-style">Checkout Extension
+                                <input type="checkbox" name="typeOption" value="checkout-ext"> 
+                                <span class="checkmark"></span>
+                            </label>
                         </div>
+                    </div>
+                </div>
+                <div class="customization-option">
+                    <div class="select-style">
+                        <div class="select-label">Coverage</div>
+                        <select id="coverageSelect">
+                            <option value="standard">Standard</option>
+                            <option value="full-coverage">Full Coverage</option>
+                        </select>
                     </div>
                 </div>
                 <div class="customization-option">
@@ -113,8 +117,28 @@
                                 - snap-right (default)
                                 - snap-left
                                 - full-coverage
+                                - checkout-ext-match (for checkout extension design)
                             -->
                             <div id="ShipInsureWidget" class="si-widget snap-right">
+                                <div class="si-widget checkout-extension-design-match">
+                                    <div class="checkout-ext-content">
+                                        <div class="checkout-ext-wrapper">
+                                            <div class="checkout-ext-checkbox">
+                                                <input type="checkbox" id="shipping-protection-checkbox" class="switch-input">
+                                                </div>
+                                            <div class="checkout-ext-info">
+                                                <div class="checkout-ext-text">
+                                              <h3>Shipping Protection</h3>
+                                              <p>Loss, damage, or theft</p>
+                                            </div>
+                                            <div class="checkout-ext-price-action">
+                                              <span class="checkout-ext-price shipinsure-amount">$0.98</span>
+                                              <a class="checkout-ext-learn-more infoPopupTag">Learn More</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="si-widget-container">
                                     <div class="si-widget-flex-column left">
                                         <svg class="si-logo si-leaf-icon" width="12" height="13" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -167,7 +191,16 @@
                                 <div id="ShipInsureDisclaimer" class="si-disclaimer">
                                     *By deselecting <span class="infoPopupTag">Package Protection &#9432;</span><a class="infoLink" href="https://help.shipinsure.io/who-we-are-and-what-we-do/" style="text-decoration: none; color: inherit;" target="_blank">Package Protection &#9432;</a>, [company] is not liable for lost, damaged, or stolen orders.
                                 </div>
+                                
                             </div> <!-- end si-widget -->
+                            <div class="checkout-ext-match-disclaimer" style="display: none;">
+                                <div class="ext-column-left">
+                                    &#9432;&nbsp;
+                                </div>
+                                <div class="ext-column-left">
+                                    By deselecting Shipping Protection, [company] is not liable for lost, damaged, or stolen packages.
+                                </div>
+                            </div>
 
                         </div>
             
@@ -332,6 +365,7 @@
                 </a>
                 <a class="si-modal-link" target="_blank" href="https://shipinsure.io/privacy/">Privacy</a>
                 <a class="si-modal-link" target="_blank" href="https://shipinsure.io/terms/">Terms</a>
+                <a class="si-modal-link" target="_blank" href="https://help.shipinsure.io/shipinsure-claims-policies/">Claims Policy</a>
             </div>
         </div>
     </div>

@@ -79,11 +79,73 @@ document.addEventListener('DOMContentLoaded', function() {
     // Define a mapping from select IDs to their respective class names
     const classMapping = {
         'disclaimerSelect': { 'noDisclaimer': '', 'disclaimer': 'disclaimer' },
-        'typeSelect': { 'minimal': 'minimal', 'eco': 'eco', 'disclaimer': 'disclaimer', 'darkmode': 'darkmode' },
+        'typeSelect': { 
+            'minimal': 'minimal', 
+            'eco': 'eco', 
+            'disclaimer': 'disclaimer', 
+            'darkmode': 'darkmode',
+            'checkout-ext': 'checkout-ext-match'
+        },
         'infoSelect': { 'infoModal': '', 'infoLink': 'info-link' },
         'snapSelect': { 'snapRight': 'snap-right', 'snapLeft': 'snap-left', 'snapSplit': 'snap-split'},
-        'coverageSelect': { 'standard': '', 'full-coverage': 'full-coverage' }
+        'coverageSelect': { 'standard': '', 'full-coverage': 'full-coverage' },
     };
+
+    // Update the handleCheckoutExtension function
+    function handleCheckoutExtension(isChecked) {
+      const widget = document.getElementById('ShipInsureWidget');
+      const otherOptions = document.querySelectorAll('#typeSelect input[type="checkbox"]:not([value="checkout-ext"]):not([value="disclaimer"])');
+      const customizationOptions = document.querySelectorAll('.customization-option:not(.widget-options)');
+      const disclaimerCheckbox = document.querySelector('input[name="typeOption"][value="disclaimer"]');
+      const checkoutExtDisclaimer = document.querySelector('.checkout-ext-match-disclaimer');
+
+      if (isChecked) {
+        // Add the checkout-ext-match class
+        widget.classList.add('checkout-ext-match');
+
+        // Hide other widget options except disclaimer
+        otherOptions.forEach(option => {
+          option.disabled = true;
+          option.parentElement.style.opacity = '0.5';
+        });
+        customizationOptions.forEach(option => {
+          option.style.display = 'none';
+        });
+
+        widget.classList.remove(classMapping['typeSelect']['disclaimer']);
+        // Show/hide checkout extension disclaimer based on disclaimer checkbox
+        checkoutExtDisclaimer.style.display = disclaimerCheckbox.checked ? 'flex' : 'none';
+      } else {
+        // Remove the checkout-ext-match class
+        widget.classList.remove('checkout-ext-match');
+
+        // Show other widget options
+        otherOptions.forEach(option => {
+          option.disabled = false;
+          option.parentElement.style.opacity = '1';
+        });
+        customizationOptions.forEach(option => {
+          option.style.display = 'block';
+        });
+
+        // Hide checkout extension disclaimer
+        checkoutExtDisclaimer.style.display = 'none';
+
+        if (disclaimerCheckbox.checked) {
+          widget.classList.add(classMapping['typeSelect']['disclaimer']);
+        }
+      }
+    }
+
+    // Add a new function to handle disclaimer changes when checkout extension is active
+    function handleDisclaimerChange(isChecked) {
+      const checkoutExtCheckbox = document.querySelector('input[name="typeOption"][value="checkout-ext"]');
+      const checkoutExtDisclaimer = document.querySelector('.checkout-ext-match-disclaimer');
+
+      if (checkoutExtCheckbox.checked) {
+        checkoutExtDisclaimer.style.display = isChecked ? 'flex' : 'none';
+      }
+    }
 
     var darkmodeCheckbox = document.querySelector('input[name="typeOption"][value="darkmode"]');
     darkmodeCheckbox.addEventListener('change', function() {
@@ -129,36 +191,50 @@ document.addEventListener('DOMContentLoaded', function() {
         selectElement.addEventListener('change', handleSelectChange);
     });
 
+    // Update the event listener for checkbox changes
     document.querySelectorAll('#typeSelect input[type="checkbox"]').forEach(checkbox => {
-        checkbox.addEventListener('change', function(event) {
-            const selectedOption = event.target.value;
-            const isChecked = event.target.checked;
-    
-            // Clear class if unchecked
-            if (!isChecked) {
-                widget.classList.remove(classMapping['typeSelect'][selectedOption]);
-            } else {
-                // Add class if checked
-                if (classMapping['typeSelect'][selectedOption]) {
-                    widget.classList.add(classMapping['typeSelect'][selectedOption]);
-                }
+      checkbox.addEventListener('change', function(event) {
+        const selectedOption = event.target.value;
+        const isChecked = event.target.checked;
+        const checkoutExtActive = document.querySelector('input[name="typeOption"][value="checkout-ext"]').checked;
 
-                // Logic to ensure "Disclaimer" and "Minimal" are not selected at the same time
-                if (selectedOption === 'minimal' && isChecked) {
-                    const disclaimerCheckbox = document.querySelector('input[type="checkbox"][value="disclaimer"]');
-                    if (disclaimerCheckbox && disclaimerCheckbox.checked) {
-                        disclaimerCheckbox.checked = false;
-                        widget.classList.remove(classMapping['typeSelect']['disclaimer']);
-                    }
-                } else if (selectedOption === 'disclaimer' && isChecked) {
-                    const minimalCheckbox = document.querySelector('input[type="checkbox"][value="minimal"]');
-                    if (minimalCheckbox && minimalCheckbox.checked) {
-                        minimalCheckbox.checked = false;
-                        widget.classList.remove(classMapping['typeSelect']['minimal']);
-                    }
-                }
+        if (selectedOption === 'checkout-ext') {
+          handleCheckoutExtension(isChecked);
+        } else if (selectedOption === 'disclaimer') {
+          if (checkoutExtActive) {
+            // Only handle the checkout extension disclaimer
+            handleDisclaimerChange(isChecked);
+            // Remove the 'disclaimer' class to prevent showing the standard widget disclaimer
+            widget.classList.remove(classMapping['typeSelect'][selectedOption]);
+          } else {
+            // Standard widget behavior
+            handleDisclaimerChange(isChecked);
+            if (!isChecked) {
+              widget.classList.remove(classMapping['typeSelect'][selectedOption]);
+            } else {
+              widget.classList.add(classMapping['typeSelect'][selectedOption]);
             }
-        });
+          }
+        } else {
+          // Existing logic for other checkboxes
+          if (!isChecked) {
+            widget.classList.remove(classMapping['typeSelect'][selectedOption]);
+          } else {
+            if (classMapping['typeSelect'][selectedOption]) {
+              widget.classList.add(classMapping['typeSelect'][selectedOption]);
+            }
+            // Logic to ensure "Minimal" is not selected when "Disclaimer" is checked
+            if (selectedOption === 'minimal' && isChecked) {
+              const disclaimerCheckbox = document.querySelector('input[name="typeOption"][value="disclaimer"]');
+              if (disclaimerCheckbox && disclaimerCheckbox.checked) {
+                disclaimerCheckbox.checked = false;
+                widget.classList.remove(classMapping['typeSelect']['disclaimer']);
+                handleDisclaimerChange(false);
+              }
+            }
+          }
+        }
+      });
     });
 
     // Handle resizing the widget demo card
